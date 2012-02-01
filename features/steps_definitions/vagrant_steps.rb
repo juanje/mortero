@@ -46,3 +46,10 @@ When /^I do a vagrant provision$/ do
   @vagrant_env.cli(['provision'])
 end
 
+And /^running "([^"]*)" with vagrant I get "([^"]*)"$/ do |cmd,expected_output|
+  @aruba_timeout_seconds = 8
+  steps %{
+    When I run `vagrant ssh -c "#{cmd}" -- -l vagrant`
+    Then the output should contain "#{expected_output}"
+  }
+end
