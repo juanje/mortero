@@ -14,8 +14,8 @@ I have to document a bit this...
 But to have a first taste let's see some simple steps:
 
     bundle install
-    vagrant up
     git clone git://github.com/gecos-team/cookbook-conf.git cookbooks/conf
+    vagrant up
     cucumber features/test.feature
 
 You can copy your LWRP's cookbook you like to test into the `cookbooks/`
