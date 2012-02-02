@@ -3,6 +3,12 @@ Description
 
 This is a simple environment to create and test Chef's LWRPs.
 
+The name is because **mortero**, in Spanish, is the bowl were you crush,
+grind and mix things to make sauces. And for me *LWRP*s are the sauces
+for our recipes in Chef :-)
+So the *mortero* is were I mix things out to get a good *sauce* for
+my Chef's recipes :-)
+
 I have to document a bit this...
 
 But to have a first taste let's see some simple steps:
