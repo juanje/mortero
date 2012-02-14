@@ -14,12 +14,12 @@ And /^the config loaded$/ do
 end
 
 And /^a single VM named "([^"]*)" created$/ do |name|
-  @vm = @vagrant_env.vms[:default]
-  @vm.box.name.should be == name and @vm.created?.should be true
+  @vm = @vagrant_env.primary_vm
+  @vm.up if @vm.box.name == name and !@vm.created?
 end
 
 And /^having the VM "([^"]*)" running$/ do |name|
-  @vm.box.name.should be == name and @vm.state.should be == :running
+  @vm.up if @vm.box.name == name and @vm.state != :running
 end
 
 # Scenarios
