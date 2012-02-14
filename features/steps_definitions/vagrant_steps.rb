@@ -42,7 +42,7 @@ When /^I do a vagrant provision$/ do
   FileUtils.rm_rf('tmp') if File.directory?('tmp')
   Dir.mkdir('tmp')
 
-  @vagrant_env.cli(['provision'])
+  @vm.provision
 end
 
 And /^running "([^"]*)" with vagrant I get "([^"]*)"$/ do |cmd,expected_output|
