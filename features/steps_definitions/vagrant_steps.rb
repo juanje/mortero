@@ -11,7 +11,6 @@ end
 
 And /^the config loaded$/ do
   @vagrant_env = Vagrant::Environment.new(@opts)
-  @vagrant_env.load!
 end
 
 And /^a single VM named "([^"]*)" created$/ do |name|
